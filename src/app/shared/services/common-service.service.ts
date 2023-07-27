@@ -9,6 +9,7 @@ export class CommonService {
   constructor() {}
 
   searchDocument(document: string): Observable<{ data: Cooperator[] }> {
+    // mock
     return new Observable((subscribe) => {
       subscribe.next({
         data: [

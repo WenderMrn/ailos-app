@@ -30,6 +30,7 @@
       text-transform: uppercase;
       font-weight: bold;
       margin-bottom: 0;
+      font-size: 1.5rem;
     }
 
     p {
@@ -156,13 +157,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    body {
-      margin: calc(var(--header-height) + 1rem) 0 0 0;
-      padding-left: calc(var(--nav-width) + 2rem);
-    }
-
     .header {
-      //height: calc(var(--header-height) + 1rem);
       padding: 1rem 2rem 0 calc(var(--nav-width) + 2rem);
     }
 

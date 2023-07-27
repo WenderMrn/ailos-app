@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store } from './store';
-
-export class NavbarState {
-  collapsed: boolean = true;
-}
+import { NavbarState } from './types';
 
 @Injectable({ providedIn: 'root' })
 export class NavbarStore extends Store<NavbarState> {

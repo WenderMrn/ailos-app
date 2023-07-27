@@ -10,26 +10,19 @@
 
 @import "./app/styles/theme.scss";
 
-
 :root {
   --header-height: 3rem;
   --nav-width: 80px;
   --nav-height: 100px;
   --first-color: #165c7d;
+  --first-color-light: #abc5d1;
   --gray-color: #ebe8e8;
-  --first-color-light: #afa5d9;
   --white-color: #f7f6fb;
   --body-font: "Nunito", sans-serif;
   --body-bg-color: #e8ebef;
   --normal-font-size: 1rem;
   --z-fixed: 100;
   ---text-color: grey;
-
-  --seasalt: #f5f8f8ff;
-  --turquoise: #1ef3ddff;
-  --zomp: #5c9a88ff;
-  --black: #000000ff;
-  --red: #ff0000ff;
 }
 
 *,
@@ -65,6 +58,13 @@ body {
       top: 0.4rem;
       height: 40px;
       padding: 0 3rem;
+
+      &.mat-button-disabled {
+        background-color: var(--first-color-light) !important;
+        span {
+          color: var(--white-color);
+        }
+      }
     }
 
     .mat-form-field-outline {
@@ -74,6 +74,11 @@ body {
 
   .simple-text {
     color: var(---text-color);
+    font-size: 0.8rem;
+  }
+
+  .mat-button {
+    padding: 0.3rem 2rem;
   }
 }
 

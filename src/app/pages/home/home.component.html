@@ -1,108 +1,24 @@
 <app-page-container>
-  <div class="stepper-area">
-    <mat-stepper [linear]="isLinear" #stepper [disableRipple]="true">
-      <mat-step [stepControl]="firstFormGroup">
-        <div class="d-flex h-100 flex-column mt-5">
-          <div class="p-2">
-            <h3>Informe o CPF do futuro cooperado(a)</h3>
-            <p class="simple-text">
-              Se necessário você poderá duplicar uma conta existente ou pausar
-              este cadastro e retomar futuramente. <br />
-              Digite apenas os números sem pontos ou traços.
-            </p>
-            <form [formGroup]="firstFormGroup" class="form-inline row">
-              <ng-template matStepLabel>início</ng-template>
-              <div class="row">
-                <div class="col-md-4">
-                  <mat-form-field
-                    style="width: 100%"
-                    appearance="outline"
-                    floatLabel="always"
-                    class="col-md-4"
-                  >
-                    <mat-label>CPF</mat-label>
-                    <input
-                      matInput
-                      mask="000.000.000-00"
-                      placeholder="000.000.000-00"
-                      formControlName="cpf"
-                    />
-                    <mat-error>{{
-                      resolveMessage(firstFormGroup, "cpf")
-                    }}</mat-error>
-                  </mat-form-field>
-                </div>
-                <div class="col-md-3">
-                  <button
-                    mat-raised-button
-                    color="primary"
-                    [disabled]="!firstFormGroup.valid"
-                    (click)="submit()"
-                  >
-                    Consultar por CPF
-                  </button>
-                </div>
-                <div class="row mt-3">
-                  <div class="col-md-4 mb-3" *ngFor="let data of dataResult">
-                    <mat-card class="card-item p-3">
-                      <mat-card-content>
-                        <section class="header">
-                          <h5 class="title">{{ data.title }}</h5>
-                          <p class="description">{{ data.description }}</p>
-                        </section>
-                        <section
-                          class="content"
-                          *ngFor="let item of data.items"
-                        >
-                          <mat-icon [style.color]="item.icon.color">{{
-                            item.icon.name
-                          }}</mat-icon>
-                          <div class="description">
-                            <label> {{ item.label }}</label>
-                            <p>{{ item.value }}</p>
-                          </div>
-                        </section>
-                        <button
-                          *ngIf="data.duplicateAccountButton"
-                          mat-button
-                          disableRipple
-                          color="primary"
-                        >
-                          Duplicar conta
-                        </button>
-                      </mat-card-content>
-                    </mat-card>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="p-2 flex-grow-1"></div>
-          <div class="bg-white p-3">
-            <button
-              class="me-3"
-              mat-button
-              mat-raised-button
-              color="primary"
-              *ngIf="dataResult.length"
-            >
-              iniciar nova admissão
-            </button>
-            <button mat-button mat-stroked-button color="primary">
-              Dicas para admissão
-            </button>
-          </div>
-        </div>
-      </mat-step>
-      <mat-step [stepControl]="secondFormGroup" label="Documentos">
-        <!-- TODO: -->
-      </mat-step>
-      <mat-step [stepControl]="secondFormGroup" label="Dados Cadastrais">
-        <!-- TODO: -->
-      </mat-step>
-      <mat-step>
-        <!-- TODO: -->
-      </mat-step>
-    </mat-stepper>
-  </div>
+  <mat-stepper [linear]="true" [disableRipple]="false">
+    <mat-step label="Início">
+      <ng-template matStepContent>
+        <app-step-start
+          [dataItems]="dataResult"
+          (submitEvent)="submit($event)"
+        ></app-step-start
+      ></ng-template>
+    </mat-step>
+    <mat-step label="Documentos">
+      <!-- TODO: -->
+      TODO
+    </mat-step>
+    <mat-step label="Dados Cadastrais">
+      <!-- TODO: -->
+      TODO
+    </mat-step>
+    <mat-step label="Admissão">
+      <!-- TODO: -->
+      TODO
+    </mat-step>
+  </mat-stepper>
 </app-page-container>

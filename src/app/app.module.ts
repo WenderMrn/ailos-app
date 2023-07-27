@@ -17,8 +17,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageContainerComponent } from './components/page-container/page-container.component';
-import { CpfCnpjPipe } from './shared/cpf-cnpj/cpf-cnpj.pipe';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { StepStartComponent } from './pages/home/components/step-start/step-start.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -40,7 +40,7 @@ const MATERIAL_MODULES = [
     NavbarComponent,
     HomeComponent,
     PageContainerComponent,
-    CpfCnpjPipe,
+    StepStartComponent,
   ],
   imports: [
     BrowserModule,

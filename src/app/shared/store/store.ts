@@ -3,7 +3,8 @@ import { Observable, BehaviorSubject } from 'rxjs';
 export class Store<T> {
   protected state$: Observable<T>;
   private _state$: BehaviorSubject<T>;
-  protected constructor(initialState: T) {
+
+  constructor(initialState: T) {
     this._state$ = new BehaviorSubject(initialState);
     this.state$ = this._state$.asObservable();
   }
