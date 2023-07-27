@@ -1,0 +1,118 @@
+:host ::ng-deep {
+  mat-stepper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+    .mat-horizontal-content-container {
+      width: 90%;
+
+      .mat-horizontal-stepper-content {
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+      }
+    }
+
+    .mat-horizontal-stepper-header-container {
+      width: 40%;
+
+      .mat-horizontal-stepper-header {
+        padding: 0;
+
+        .mat-step-icon {
+          margin-right: 0;
+          margin-bottom: 0.5rem;
+
+          &.mat-step-icon {
+            background-color: rgba(104, 103, 103, 0.54);
+          }
+
+          &.mat-step-icon-state-number.mat-step-icon-selected {
+            border: 2px solid var(--first-color);
+            border-radius: 20px;
+            background: transparent;
+          }
+        }
+
+        .mat-step-label.mat-step-label-selected {
+          .mat-step-text-label {
+            color: var(--first-color);
+          }
+        }
+      }
+
+      span.ng-star-inserted {
+        color: transparent;
+      }
+
+      .mat-step-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+
+  .card-item {
+    height: 100%;
+
+    .header {
+      .title {
+        margin-bottom: 0;
+      }
+
+      .description {
+        color: var(---text-color);
+        font-family: monospace;
+
+        font-size: 0.8rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      gap: 1rem;
+
+      mat-icon {
+        margin-top: 0.5rem;
+        color: var(---text-color);
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-weight: 600;
+
+        label {
+          color: var(---text-color);
+          font-weight: 500;
+        }
+
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+
+    button,
+    button:hover {
+      padding: 0.5rem 0;
+
+      .mat-button-focus-overlay,
+      .mat-button-ripple {
+        background: transparent;
+      }
+    }
+  }
+
+  .action-area {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--white-color);
+  }
+}

@@ -1,0 +1,11 @@
+:host ::ng-deep {
+  .page-container {
+    margin-top: calc(var(--nav-height) + 1rem);
+
+    &.expanded {
+      margin-left: calc(var(--nav-width) + 5rem);
+      transition-delay: 500ms;
+      transition-property: margin-left;
+    }
+  }
+}
