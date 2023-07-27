@@ -1,4 +1,6 @@
-/* For use in src/lib/core/theming/_palette.scss */
+@use '@angular/material' as mat;
+@include mat.core();
+
 $md-nacpallete: (
     50 : #e3ebef,
     100 : #b9ced8,
@@ -32,3 +34,25 @@ $md-nacpallete: (
     )
 );
 
+$primary-palette-color: mat.define-palette($md-nacpallete, 500);
+$accent-palette-color: mat.define-palette($md-nacpallete, A200, A100, A400);
+
+$primary-color: map-get($md-nacpallete, 500);
+$primary-color-light: map-get($md-nacpallete, 200);
+$gray-color: #ebe8e8;
+$white-color: #f7f6fb;
+$body-bg-color: #e8ebef;
+$normal-font-size: 1rem;
+$z-fixed: 100;
+$text-color: grey;
+
+$xxs-screen-size: 460px;
+$xs-screen-size: 560px;
+$sm-screen-size: 760px;
+$xl-screen-size: 1200px;
+
+$header-height: 3rem;
+$nav-width: 80px;
+$nav-height: 100px;
+
+$body-font: Roboto, "Helvetica Neue", sans-serif;

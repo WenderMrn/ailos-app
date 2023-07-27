@@ -1,0 +1,43 @@
+@import "/src/app/styles/variables";
+
+:host ::ng-deep {
+  .mat-form-field {
+    display: initial;
+    width: 100%;
+    padding: 0;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.5rem;
+  }
+
+  .form-inline {
+    gap: 1rem;
+
+    button {
+      top: 0.4rem;
+      height: 40px;
+      padding: 0 3rem;
+
+      &.mat-button-disabled {
+        background-color: $primary-color-light !important;
+        span {
+          color: $white-color;
+        }
+      }
+    }
+
+    .mat-form-field-outline {
+      background-color: $white-color;
+    }
+  }
+
+  .simple-text {
+    color: $text-color;
+    font-size: 0.8rem;
+  }
+
+  .mat-button {
+    padding: 0.3rem 2rem;
+  }
+}

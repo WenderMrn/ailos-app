@@ -1,3 +1,5 @@
+@import "/src/app/styles/variables";
+
 :host ::ng-deep {
   mat-stepper {
     display: flex;
@@ -8,6 +10,7 @@
 
     .mat-horizontal-content-container {
       width: 90%;
+      overflow: auto;
 
       .mat-horizontal-stepper-content {
         display: flex;
@@ -16,7 +19,7 @@
     }
 
     .mat-horizontal-stepper-header-container {
-      width: 40%;
+      width: 90%;
 
       .mat-horizontal-stepper-header {
         padding: 0;
@@ -30,7 +33,7 @@
           }
 
           &.mat-step-icon-state-number.mat-step-icon-selected {
-            border: 2px solid var(--first-color);
+            border: 2px solid $primary-color;
             border-radius: 20px;
             background: transparent;
           }
@@ -38,7 +41,7 @@
 
         .mat-step-label.mat-step-label-selected {
           .mat-step-text-label {
-            color: var(--first-color);
+            color: $primary-color;
           }
         }
       }
@@ -55,4 +58,28 @@
       }
     }
   }
+
+  @media screen and (max-width: $sm-screen-size) {
+    .mat-horizontal-stepper-header-container {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $xl-screen-size) {
+    mat-stepper {
+      .mat-horizontal-stepper-header-container {
+        width: 50%;
+      }
+
+      .mat-horizontal-content-container  {
+        padding: 0;
+        overflow: hidden;
+
+        .mat-horizontal-stepper-content {
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }

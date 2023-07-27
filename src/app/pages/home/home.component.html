@@ -1,12 +1,10 @@
 <app-page-container>
   <mat-stepper [linear]="true" [disableRipple]="false">
     <mat-step label="Início">
-      <ng-template matStepContent>
-        <app-step-start
-          [dataItems]="dataResult"
-          (submitEvent)="submit($event)"
-        ></app-step-start
-      ></ng-template>
+      <app-step-start
+        [dataItems]="dataResult"
+        (submitEvent)="submit($event)"
+      ></app-step-start>
     </mat-step>
     <mat-step label="Documentos">
       <!-- TODO: -->

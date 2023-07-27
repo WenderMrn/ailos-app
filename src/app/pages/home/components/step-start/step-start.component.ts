@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Cooperator } from 'src/app/shared/services/types';
-import { CpfCnpjValidator } from 'src/app/shared/validators/cpfcnpj2.validatior';
+import { CpfCnpjValidator } from 'src/app/shared/validators/cpfcnpj.validatior';
 import { ValidationsMessage } from 'src/app/shared/validators/validations-messages';
 
 @Component({

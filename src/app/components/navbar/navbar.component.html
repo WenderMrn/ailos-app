@@ -18,7 +18,7 @@
     </div>
   </div>
 </header>
-<div class="l-navbar" [ngClass]="{ show: !collapsed }">
+<div class="l-navbar" [ngClass]="{ collapsed: collapsed }">
   <nav class="nav">
     <div>
       <a href="#" class="nav_logo">
@@ -29,7 +29,7 @@
         <span class="nav_logo-name">AILOS</span>
       </a>
       <div class="nav_list">
-        <div class="header_toggle" (click)="toggleMenu()">
+        <div class="header_toggle toogle-menu" (click)="toggleMenu()">
           <mat-icon>{{ collapsed ? "menu" : "arrow_back_ios" }}</mat-icon>
         </div>
         <a href="#" class="nav_link">
