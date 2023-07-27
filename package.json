@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:gh-pages": "ng build --base-href=https://wendermrn.github.io/ailos-app/",
+    "deploy:gh-pages": "build:gh-pages && npx angular-cli-ghpages --dir=dist/ailos-app"
   },
   "private": true,
   "dependencies": {
