@@ -29,6 +29,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deploy github pages
 
+Build githup pages
+```bash
+ng build --base-href=https://wendermrn.github.io/ailos-app/
+```
+
+Deploy githup pages
 ```bash
 ng deploy --base-href=https://wendermrn.github.io/ailos-app/
 ```
