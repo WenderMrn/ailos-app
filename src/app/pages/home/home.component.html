@@ -19,4 +19,18 @@
       TODO
     </mat-step>
   </mat-stepper>
+  <div class="action-area bg-white">
+    <button
+      class="me-3"
+      mat-button
+      mat-raised-button
+      color="primary"
+      *ngIf="dataResult.length"
+    >
+      iniciar nova admissão
+    </button>
+    <button mat-button mat-stroked-button color="primary">
+      Dicas para admissão
+    </button>
+  </div>
 </app-page-container>

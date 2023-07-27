@@ -1,12 +1,17 @@
 @import "/src/app/styles/variables";
 
 :host ::ng-deep {
+  .page-container {
+    flex-direction: column;
+  }
+
   mat-stepper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: transparent;
+    flex-grow: 1;
 
     .mat-horizontal-content-container {
       width: 90%;
@@ -59,9 +64,33 @@
     }
   }
 
+  .action-area {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 6rem;
+  }
+
   @media screen and (max-width: $sm-screen-size) {
+    .mat-horizontal-stepper-content {
+      height: 180vh;
+    }
+
     .mat-horizontal-stepper-header-container {
       width: 100%;
+    }
+
+    .action-area {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 1rem;
+      gap: 0.5rem;
+
+      button {
+        width: 100%;
+      }
     }
   }
 
@@ -71,7 +100,7 @@
         width: 40%;
       }
 
-      .mat-horizontal-content-container  {
+      .mat-horizontal-content-container {
         padding: 0;
         overflow: hidden;
 
@@ -81,5 +110,4 @@
       }
     }
   }
-
 }

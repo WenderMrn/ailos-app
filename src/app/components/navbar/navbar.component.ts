@@ -15,6 +15,10 @@ export class NavbarComponent implements OnInit {
     this.store.toggleMenu();
   }
 
+  toggleMenuMobile(): void {
+    //TODO:
+  }
+
   get collapsed() {
     return this.store.state.collapsed;
   }

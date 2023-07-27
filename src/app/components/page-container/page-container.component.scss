@@ -1,13 +1,31 @@
 @import "/src/app/styles/variables";
 
-:host ::ng-deep {
-  .page-container {
-    margin-top: calc(#{$nav-height} + 1rem);
+:host {
+  display: contents;
 
-    &.expanded {
-      margin-left: calc(#{$nav-width}  + 5rem);
-      transition-delay: 500ms;
-      transition-property: margin-left;
+  ::ng-deep {
+    .page-container {
+      display: flex;
+      justify-content: center;
+      margin-top: calc(#{$nav-height} + 1rem);
+  
+      &.expanded {
+        margin-left: calc(#{$nav-width}  + 5rem);
+        transition-delay: 500ms;
+        transition-property: margin-left;
+      }
+    }
+
+    @media screen and (max-width: $xl-screen-size) {
+      .page-container {
+        padding: 0;
+      }
+    }
+
+    @media screen and (min-width: $sm-screen-size) {
+      .page-container {
+        padding-left: $nav-width;
+      }
     }
   }
 }

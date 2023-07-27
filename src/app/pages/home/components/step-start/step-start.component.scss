@@ -6,7 +6,7 @@
   ::ng-deep {
     .step {
       justify-content: space-between;
-      height: 75vh;
+      height: auto;
 
       .card-item {
         height: 100%;
@@ -65,7 +65,7 @@
 
     @media screen and (max-width: $sm-screen-size) {
       .step {
-        height: auto;
+        height: 120vh;
       }
     }
   }
