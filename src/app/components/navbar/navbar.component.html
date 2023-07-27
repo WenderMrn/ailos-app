@@ -4,13 +4,13 @@
     <p>Cadastro / Admissão de cooperado(a) / Nova Admissão de Cooperado(a)</p>
   </div>
   <div class="d-flex align-items-center justify-content-center">
-    <div class="mr-4">
+    <div class="me-3">
       <mat-icon class="mt-2" matBadge="15" matBadgeColor="warn"
         >notifications_none</mat-icon
       >
       <span class="cdk-visually-hidden"> 15 notificações </span>
     </div>
-    <button class="btn-viacredi mr-4" mat-stroked-button color="primary">
+    <button class="btn-viacredi me-3" mat-stroked-button color="primary">
       VIACREDI
     </button>
     <div class="header_img">
@@ -30,10 +30,7 @@
       </a>
       <div class="nav_list">
         <div class="header_toggle" (click)="toggleMenu()">
-          <i
-            class="bx"
-            [ngClass]="collapsed ? 'bx-menu' : 'bxs-chevron-left'"
-          ></i>
+          <mat-icon>{{ collapsed ? "menu" : "arrow_back_ios" }}</mat-icon>
         </div>
         <a href="#" class="nav_link">
           <mat-icon>search</mat-icon>
@@ -57,9 +54,5 @@
         </a>
       </div>
     </div>
-    <a href="#" class="nav_link">
-      <i class="bx bx-log-out nav_icon"></i>
-      <span class="nav_name">Sair</span>
-    </a>
   </nav>
 </div>
