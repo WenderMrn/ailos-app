@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarStore } from 'src/app/shared/store/navbar.store';
+import { NavbarStore } from 'src/app/shared/store/navbar/navbar.store';
 
 @Component({
   selector: 'app-page-container',
