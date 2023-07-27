@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarState, NavbarStore } from 'src/app/store/navbar.store';
+import { NavbarState, NavbarStore } from 'src/app/shared/store/navbar.store';
 
 @Component({
   selector: 'app-navbar',

@@ -17,8 +17,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageContainerComponent } from './components/page-container/page-container.component';
-import { ProgressStepperComponent } from './progress-stepper/progress-stepper.component';
-import { CpfCnpjPipe } from './pipes/cpf-cnpj/cpf-cnpj.pipe';
+import { CpfCnpjPipe } from './shared/cpf-cnpj/cpf-cnpj.pipe';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const maskConfig: Partial<IConfig> = {
@@ -41,7 +40,6 @@ const MATERIAL_MODULES = [
     NavbarComponent,
     HomeComponent,
     PageContainerComponent,
-    ProgressStepperComponent,
     CpfCnpjPipe,
   ],
   imports: [

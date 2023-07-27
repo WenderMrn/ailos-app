@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CommonService } from 'src/app/services/common-service.service';
-import { Cooperator } from 'src/app/services/types';
+import { CommonService } from 'src/app/shared/services/common-service.service';
+import { Cooperator } from 'src/app/shared/services/types';
 import { CpfCnpjValidator } from 'src/app/shared/validators/cpfcnpj2.validatior';
 import { ValidationsMessage } from 'src/app/shared/validators/validations-messages';
 
