@@ -13,6 +13,11 @@ https://wendermrn.github.io/ailos-app/
 * cpf-cnpj-validator v1.x.x: https://www.npmjs.com/package/cpf-cnpj-validator
 * ngx-mask 12.x.x: https://www.npmjs.com/package/ngx-mask 
 
+## Setup
+
+```bash
+npm install
+```
 
 ## Local server
 
@@ -21,7 +26,7 @@ https://wendermrn.github.io/ailos-app/
 npm start
 ```
 
-Navigate to `http://localhost:4200/`.
+Navigate to http://localhost:4200/.
 
 ## Build and Deploy to github pages
 
